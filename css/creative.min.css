@@ -172,7 +172,7 @@ time {
     margin-left: 20px;
   }
   #Work-experience ul li div {
-    width: calc(100vw - 91px);
+    width: calc(100vw - 11rem);
   }
   #Work-experience ul li:nth-child(even) div {
     left: 45px;
@@ -181,9 +181,6 @@ time {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent #787878 transparent transparent;
-  }
-  #Work-experience ul li:nth-child(even) div {
-    transform: translate3d(200px, 0, 0);
   }
 
 }
