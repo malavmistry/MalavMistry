@@ -81,7 +81,7 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">MALAV MISTRY</h1>
                 <hr class="light">
-                <p class="sr-button">I am a Software Developer</p>
+                <p class="sr-button">SOFTWARE DEVELOPER | INNOVATOR | CODER</p>
                 <a href="#about" class="btn btn-default btn-xl sr-button page-scroll">About Me</a>
             </div>
         </div>
@@ -99,7 +99,7 @@
                     <div class="service-box ">
                         <h2 class="section-heading">About Me</h2>
                         <hr class="primary">
-                        <p style="text-align: justify;">Passionate and highly motivated individual with 8+ years of professional experience in software industry, with good understanding of Data Structure and Algorithms and experience in working with .Net MVC architecture, Web Technologies and creating complex SQL, T-SQL queries.<br><br><br> 
+                        <p style="text-align: justify;">A seasoned software developer with 8+ years of experience in backend and full-stack development, proficient in C#, .NET, Angular, and SQL. Strong understanding of Data Structures and Algorithms, with expertise in Web Technologies, API Development, cloud platforms (AWS, Azure), and performance optimization. Experienced in applying best practices such as Test-Driven Development (TDD), CI/CD, and agile methodologies. Passionate about building scalable, secure software systems that solve real-world problems, driving innovation, and supporting business growth.<br><br><br> 
                             Want to see my resume. <a href="document\RESUME.pdf" target = "_blank">Click here!</a>
                         </p>
                     </div>
@@ -225,9 +225,9 @@
     </section>
     <section>
         <hr class="dark">
-        <h2 class="text-center">
-            Be A Better Version Of You Everyday!
-            </h2>
+	<h2 class="text-center quote-container">
+        	<div class="quote" id="quote"></div>
+	</h2>
         <hr class="dark">   
         </section>
 
@@ -390,6 +390,32 @@
 	mixpanel.track_links("#my_resume", "Resume", {
   	  referrer: document.referrer
 	});
+    </script>
+    <script>
+        const quotes = [
+            { text: "The only way to do great work is to love what you do." },
+            { text: "Success is not the key to happiness. Happiness is the key to success." },
+            { text: "Don’t watch the clock; do what it does. Keep going." },
+            { text: "Believe you can and you’re halfway there." },
+            { text: "Success is not final, failure is not fatal: It is the courage to continue that counts." },
+            { text: "The function of good software is to make the complex appear to be simple." },
+            { text: "Software is a great combination between artistry and engineering." },
+            { text: "The best error message is the one that never shows up." },
+            { text: "If you’re not making mistakes, then you’re not making decisions." }
+        ];
+
+        function getRandomQuote() {
+            const index = Math.floor(Math.random() * quotes.length);
+            return quotes[index];
+        }
+
+        function displayQuote() {
+            const quote = getRandomQuote();
+            document.getElementById("quote").textContent = `"${quote.text}"`;
+        }
+
+        // Display a new quote every time the page is loaded
+        window.onload = displayQuote;
     </script>
 </body>
 
