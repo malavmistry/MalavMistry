@@ -55,6 +55,7 @@ aside{padding:50px 0}
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #Work-experience ul {
+  positon:relative;
   background: white;
   padding: 50px 0;
 }
@@ -168,11 +169,18 @@ time {
 }
 
 @media screen and (max-width: 600px) {
+#Work-experience ul li:nth-child(odd) div {
+  transform: none;
+}
+
+#Work-experience ul li:nth-child(even) div {
+  transform: none;
+}
   #Work-experience ul li {
-    margin-left: 20px;
+    margin-left: 3rem;
   }
   #Work-experience ul li div {
-    width: calc(100vw - 11rem);
+    width: 250px;
   }
   #Work-experience ul li:nth-child(even) div {
     left: 45px;
