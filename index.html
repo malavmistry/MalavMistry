@@ -161,9 +161,9 @@
     /* ======== FLOATING NAV BUTTONS ======== */
     #nav-buttons {
       position: fixed; bottom: 2.2rem;
-      left: 50%; transform: translateX(-50%);
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem; z-index: 100;
-      width: max-content; max-width: 92vw;
+      left: 0; right: 0;
+      display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.9rem;
+      z-index: 100; padding: 0 1rem;
       animation: fadeInUp 1s ease 2s both;
     }
     .nav-btn {
@@ -262,6 +262,10 @@
       border:2px solid var(--cyan); box-shadow:0 0 20px rgba(0,245,255,0.25);
       display:flex; align-items:center; justify-content:center;
       font-size:2.6rem; color:var(--cyan); background:rgba(0,245,255,0.04);
+      overflow:hidden; flex-shrink:0;
+    }
+    .profile-icon img {
+      width:100%; height:100%; object-fit:cover; border-radius:50%;
     }
     .about-text p { line-height:1.85; color:var(--text); font-size:0.98rem; margin-bottom:0.85rem; }
     .about-text strong { color:var(--cyan); }
@@ -429,10 +433,10 @@
 
   <!-- ░░ FLOATING NAV BUTTONS ░░ -->
   <nav id="nav-buttons">
-    <button class="nav-btn" data-card="about"><i class="fas fa-user"></i><span>About Me</span></button>
-    <button class="nav-btn" data-card="experience"><i class="fas fa-briefcase"></i><span>Qualification &amp; Experience</span></button>
-    <button class="nav-btn" data-card="projects"><i class="fas fa-code"></i><span>Projects</span></button>
-    <button class="nav-btn" data-card="contact"><i class="fas fa-envelope"></i><span>Contact Me</span></button>
+     <button class="nav-btn" data-card="about"><i class="fas fa-user"></i><span>Profile</span></button>
+     <button class="nav-btn" data-card="experience"><i class="fas fa-briefcase"></i><span>Journey</span></button>
+     <button class="nav-btn" data-card="projects"><i class="fas fa-code"></i><span>Builds</span></button>
+     <button class="nav-btn" data-card="contact"><i class="fas fa-envelope"></i><span>Connect</span></button>
   </nav>
 
   <!-- ░░ CARD OVERLAY ░░ -->
@@ -450,7 +454,9 @@
     <div class="card-title">// ABOUT_ME</div>
     <div class="about-grid">
       <div>
-        <div class="profile-icon"><i class="fas fa-user-astronaut"></i></div>
+        <div class="profile-icon">
+          <img src="img/profile.png" alt="Malav Mistry">
+        </div>
       </div>
       <div class="about-text">
         <p>A seasoned software developer with <strong>8+ years</strong> of experience in backend and full-stack development, proficient in <strong>C#, .NET, Angular</strong>, and <strong>SQL</strong>.</p>
